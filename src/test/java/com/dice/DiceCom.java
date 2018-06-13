@@ -49,5 +49,16 @@ public class DiceCom {
 		String count = driver.findElement(By.id("posiCountId")).getText();
 		System.out.println(count);
 
+		// ensure count is more than 0
+		int countResult = Integer.parseInt(count.replaceAll(",", ""));
+
+		if (countResult > 0) {
+			System.out.println("Keyword" + keyword + "search returned " + countResult + " results in " + location);
+		} else {
+			System.out.println(
+					"Step FAIL : Keyword" + keyword + "search returned " + countResult + " results in " + location);
+		}
+
+		driver.close();
 	}
 }
