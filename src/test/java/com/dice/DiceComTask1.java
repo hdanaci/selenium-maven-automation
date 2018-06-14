@@ -30,9 +30,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DiceComTask1 {
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
-		
+
 		String[] list = { "Junior Developer", "Java Developer", "Senior Business Analyst", "Senior Software Engineer",
-				"Software Engineer", "system Administrator", "Selenium Automation Engineer",
+				"Software Engineer", "System Administrator", "Selenium Automation Engineer",
 				"Selenium Mobile Web service Tester", "Selenium WebDriver", "Ruby Rails Developer", "RF Engineer",
 				"Test Engineer", "Computer Operator", "Designer", "Linux Administrator", "Lead Business Analyst",
 				"Marketing Manager", "Network Administrator", "Network Engineer", "Business Analyst Project Manager" };
@@ -41,9 +41,10 @@ public class DiceComTask1 {
 		for (int i = 0; i < list.length; i++) {
 			keywords.add(list[i]);
 		}
-		
+
 		String[] zips = { "90001", "80001", "32004", "60001", "48001", "10001", "43001", "73301", "20040", "98001",
-				"15001", "37010", "27006", "25813", "55001", "85001", "66002", "46001", "96701", "35004" };
+				"15001", "37010", "27006", "30303", "55001", "85001", "66002", "46001", "96701", "35004" };
+
 		List<String> zipCode = new ArrayList<>();
 		for (int i = 0; i < list.length; i++) {
 			zipCode.add(zips[i]);
@@ -65,7 +66,7 @@ public class DiceComTask1 {
 
 		driver2.manage().window().fullscreen();
 		driver2.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		
+
 		String url = "https://dice.com";
 		driver2.get(url);
 
@@ -102,7 +103,6 @@ public class DiceComTask1 {
 		} else {
 			return "Step FAIL : Keyword : " + key + " search returned : " + countResult + " results in " + zip;
 		}
-		
 
 	}
 

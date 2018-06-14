@@ -59,6 +59,6 @@ public class DiceCom {
 					"Step FAIL : Keyword" + keyword + "search returned " + countResult + " results in " + location);
 		}
 
-//		driver.close();
+		driver.close();
 	}
 }

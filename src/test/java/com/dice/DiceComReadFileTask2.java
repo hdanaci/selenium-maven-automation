@@ -53,7 +53,6 @@ public class DiceComReadFileTask2 {
 		}
 
 		for (String each : jobCount) {
-
 			System.out.println(each);
 		}
 
